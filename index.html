@@ -14,265 +14,181 @@
       background-color: #080808;
       background-image: radial-gradient(circle, #1c1c1c 1px, transparent 1px);
       background-size: 22px 22px;
-      color: #ffffff;
+      color: #fff;
       min-height: 100vh;
       padding: 52px 48px 80px;
     }
 
     #pixelBg {
-      position: fixed;
-      top: 0; left: 0;
+      position: fixed; top: 0; left: 0;
       width: 100vw; height: 100vh;
-      pointer-events: none;
-      z-index: 0;
+      pointer-events: none; z-index: 0;
     }
-
-    body > *:not(#pixelBg) {
-      position: relative;
-      z-index: 1;
-    }
+    body > *:not(#pixelBg) { position: relative; z-index: 1; }
 
     /* ── PIXEL CORNERS ── */
     .pixel-corner {
-      position: absolute;
-      width: 2px; height: 2px;
-      pointer-events: none;
+      position: absolute; width: 2px; height: 2px; pointer-events: none;
     }
-    .pixel-corner.top-right {
-      top: 14px; right: 14px;
-      background: rgba(99,102,241,0.25);
-      box-shadow: -4px 0 0 rgba(99,102,241,0.15), -8px 0 0 rgba(99,102,241,0.07),
-                  0 4px 0 rgba(99,102,241,0.15), -4px 4px 0 rgba(99,102,241,0.1),
-                  0 8px 0 rgba(99,102,241,0.07);
+    .pc-purple {
+      background: rgba(99,102,241,0.28);
+      box-shadow: -4px 0 0 rgba(99,102,241,0.16), -8px 0 0 rgba(99,102,241,0.07),
+                  0 4px 0 rgba(99,102,241,0.16), -4px 4px 0 rgba(99,102,241,0.1), 0 8px 0 rgba(99,102,241,0.06);
     }
-    .pixel-corner.neutral {
-      background: rgba(255,255,255,0.06);
+    .pc-green {
+      background: rgba(74,138,74,0.3);
+      box-shadow: -4px 0 0 rgba(74,138,74,0.18), -8px 0 0 rgba(74,138,74,0.08),
+                  0 4px 0 rgba(74,138,74,0.18), -4px 4px 0 rgba(74,138,74,0.1), 0 8px 0 rgba(74,138,74,0.05);
+    }
+    .pc-amber {
+      background: rgba(180,130,9,0.3);
+      box-shadow: -4px 0 0 rgba(180,130,9,0.18), -8px 0 0 rgba(180,130,9,0.08),
+                  0 4px 0 rgba(180,130,9,0.18), -4px 4px 0 rgba(180,130,9,0.1), 0 8px 0 rgba(180,130,9,0.05);
+    }
+    .pc-teal {
+      background: rgba(20,184,166,0.28);
+      box-shadow: -4px 0 0 rgba(20,184,166,0.16), -8px 0 0 rgba(20,184,166,0.07),
+                  0 4px 0 rgba(20,184,166,0.16), -4px 4px 0 rgba(20,184,166,0.1), 0 8px 0 rgba(20,184,166,0.05);
+    }
+    .pc-neutral {
+      background: rgba(255,255,255,0.07);
       box-shadow: -4px 0 0 rgba(255,255,255,0.04), -8px 0 0 rgba(255,255,255,0.02),
                   0 4px 0 rgba(255,255,255,0.04), -4px 4px 0 rgba(255,255,255,0.03);
-    }
-    .pixel-corner.green {
-      background: rgba(74,138,74,0.3);
-      box-shadow: -4px 0 0 rgba(74,138,74,0.2), -8px 0 0 rgba(74,138,74,0.08),
-                  0 4px 0 rgba(74,138,74,0.2), -4px 4px 0 rgba(74,138,74,0.12),
-                  0 8px 0 rgba(74,138,74,0.06);
-    }
-    .pixel-corner.amber {
-      background: rgba(180,130,9,0.3);
-      box-shadow: -4px 0 0 rgba(180,130,9,0.2), -8px 0 0 rgba(180,130,9,0.08),
-                  0 4px 0 rgba(180,130,9,0.2), -4px 4px 0 rgba(180,130,9,0.12),
-                  0 8px 0 rgba(180,130,9,0.06);
     }
 
     /* ── HEADER ── */
     .page-header {
       text-align: center;
-      margin-bottom: 56px;
-      max-width: 720px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 52px;
+      max-width: 680px;
+      margin-left: auto; margin-right: auto;
     }
-    .page-header .eyebrow {
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #777;
-      margin-bottom: 12px;
+    .eyebrow {
+      font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+      color: #777; margin-bottom: 12px;
     }
     .page-header h1 {
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: -1px;
-      background: linear-gradient(135deg, #ffffff 0%, #999 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      font-size: 38px; font-weight: 800; letter-spacing: -1px;
+      background: linear-gradient(135deg, #fff 0%, #999 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
       margin-bottom: 16px;
     }
     .page-header .subtitle {
-      font-size: 14px;
-      color: #777;
-      line-height: 1.7;
-    }
-    .page-header .subtitle em {
-      color: #555;
-      font-style: normal;
+      font-size: 14px; color: #666; line-height: 1.7;
     }
 
-    /* ── GRID ── */
-    .agreements-grid {
+    /* ── PRINCIPLES GRID ── */
+    /* 6-column grid: top 3 cards span 2 each, bottom 2 span 3 each */
+    .principles-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(6, 1fr);
       gap: 14px;
       max-width: 1280px;
       margin: 0 auto;
     }
+    .principle-card       { grid-column: span 2; }
+    .principle-card--wide { grid-column: span 3; }
 
-    /* ── SECTION CARD ── */
-    .section-card {
+    /* ── PRINCIPLE CARD ── */
+    .principle-card, .principle-card--wide {
       background: #0c0c0c;
-      border: 1px solid #242424;
+      border: 1px solid #222;
       border-radius: 16px;
-      padding: 28px 28px 24px;
+      padding: 26px 24px 22px;
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 18px;
       transition: border-color 0.2s, transform 0.15s;
     }
-    .section-card:hover { border-color: #2e2e2e; transform: translateY(-2px); }
-
-    .section-card--purple {
-      background: linear-gradient(145deg, #0f0f28 0%, #0a0a1a 100%);
-      border-color: rgba(99,102,241,0.18);
-    }
-    .section-card--green {
-      background: linear-gradient(145deg, #0c180c 0%, #080f08 100%);
-      border-color: rgba(74,138,74,0.18);
-    }
-    .section-card--amber {
-      background: linear-gradient(145deg, #171008 0%, #0f0a05 100%);
-      border-color: rgba(180,130,9,0.18);
+    .principle-card:hover, .principle-card--wide:hover {
+      border-color: #2e2e2e; transform: translateY(-2px);
     }
 
-    /* ── CARD HEADER ── */
-    .card-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
+    /* colour variants */
+    .card--amber  { background: linear-gradient(145deg, #14100600, #0e0a0400); border-color: rgba(180,130,9,0.16); }
+    .card--purple { background: linear-gradient(145deg, #0f0f28 0%, #0a0a1a 100%); border-color: rgba(99,102,241,0.18); }
+    .card--teal   { background: linear-gradient(145deg, #081412 0%, #050e0d 100%); border-color: rgba(20,184,166,0.16); }
+    .card--green  { background: linear-gradient(145deg, #0b180b 0%, #070f07 100%); border-color: rgba(74,138,74,0.18); }
+    /* card 5 stays default dark */
+
+    /* ── CARD TOP ── */
+    .card-top { display: flex; align-items: flex-start; gap: 14px; }
+    .card-num {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      color: #2e2e2e; flex-shrink: 0; padding-top: 3px;
     }
-    .card-number {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: #333;
-      padding-top: 3px;
-      flex-shrink: 0;
-    }
-    .card-header-text { flex: 1; }
-    .card-tag {
+    .card-top-text { flex: 1; }
+
+    .principle-tag {
       display: inline-block;
-      font-size: 9px;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: #888;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid #2a2a2a;
-      padding: 4px 10px;
-      border-radius: 100px;
-      margin-bottom: 10px;
+      font-size: 9px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 100px; margin-bottom: 9px;
+      color: #888; background: rgba(255,255,255,0.04); border: 1px solid #282828;
     }
-    .section-card--purple .card-tag { color: #818cf8; background: rgba(99,102,241,0.08); border-color: rgba(99,102,241,0.18); }
-    .section-card--green  .card-tag { color: #6fcf6f; background: rgba(74,138,74,0.08);  border-color: rgba(74,138,74,0.18);  }
-    .section-card--amber  .card-tag { color: #d4a017; background: rgba(180,130,9,0.08);  border-color: rgba(180,130,9,0.18);  }
+    .card--amber  .principle-tag { color: #d4a017; background: rgba(180,130,9,0.08);  border-color: rgba(180,130,9,0.2);  }
+    .card--purple .principle-tag { color: #818cf8; background: rgba(99,102,241,0.09); border-color: rgba(99,102,241,0.2); }
+    .card--teal   .principle-tag { color: #2dd4bf; background: rgba(20,184,166,0.08); border-color: rgba(20,184,166,0.2); }
+    .card--green  .principle-tag { color: #6fcf6f; background: rgba(74,138,74,0.08);  border-color: rgba(74,138,74,0.2);  }
 
-    .card-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.3px;
-      line-height: 1.2;
-      margin-bottom: 5px;
+    .principle-title {
+      font-size: 18px; font-weight: 700; color: #fff;
+      letter-spacing: -0.3px; line-height: 1.2; margin-bottom: 5px;
     }
-    .card-question {
-      font-size: 12px;
-      color: #555;
-      font-style: italic;
-      line-height: 1.5;
+    .principle-desc {
+      font-size: 12px; color: #555; line-height: 1.55;
     }
 
     /* ── DIVIDER ── */
-    .card-divider {
-      border: none;
-      border-top: 1px solid #1a1a1a;
-      margin: 0;
-    }
-    .section-card--purple .card-divider { border-color: rgba(99,102,241,0.08); }
-    .section-card--green  .card-divider { border-color: rgba(74,138,74,0.08);  }
-    .section-card--amber  .card-divider { border-color: rgba(180,130,9,0.08);  }
+    .card-divider { border: none; border-top: 1px solid #181818; }
+    .card--amber  .card-divider { border-color: rgba(180,130,9,0.08); }
+    .card--purple .card-divider { border-color: rgba(99,102,241,0.09); }
+    .card--teal   .card-divider { border-color: rgba(20,184,166,0.08); }
+    .card--green  .card-divider { border-color: rgba(74,138,74,0.08); }
 
-    /* ── AGREEMENTS LIST ── */
-    .agreements-list {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .agreement-item { display: flex; gap: 12px; align-items: flex-start; }
-    .agreement-bullet {
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: #333;
-      flex-shrink: 0;
-      margin-top: 7px;
-    }
-    .section-card--purple .agreement-bullet { background: rgba(99,102,241,0.5); }
-    .section-card--green  .agreement-bullet { background: rgba(74,138,74,0.5);  }
-    .section-card--amber  .agreement-bullet { background: rgba(180,130,9,0.5);  }
+    /* ── AGREEMENTS ── */
+    .agreements-list { display: flex; flex-direction: column; gap: 12px; }
 
-    .agreement-body { flex: 1; }
+    .agreement-row { display: flex; gap: 10px; align-items: flex-start; }
+    .agreement-dot {
+      width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0;
+      margin-top: 6px; background: #2a2a2a;
+    }
+    .card--amber  .agreement-dot { background: rgba(180,130,9,0.5); }
+    .card--purple .agreement-dot { background: rgba(99,102,241,0.5); }
+    .card--teal   .agreement-dot { background: rgba(20,184,166,0.5); }
+    .card--green  .agreement-dot { background: rgba(74,138,74,0.5); }
+
+    .agreement-inner { flex: 1; }
+    .agreement-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-bottom: 3px; }
     .agreement-title {
-      font-size: 13px;
-      font-weight: 600;
-      color: #ccc;
-      margin-bottom: 3px;
-      line-height: 1.4;
-    }
-    .agreement-desc {
-      font-size: 12px;
-      color: #666;
-      line-height: 1.6;
+      font-size: 12px; font-weight: 600; color: #ccc; line-height: 1.4;
     }
 
-    /* ── EXPECT BLOCK ── */
-    .expect-block {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid #1e1e1e;
-      border-left: 2px solid #333;
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin-top: auto;
+    /* source tag */
+    .source-tag {
+      font-size: 9px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+      color: #333; border: 1px solid #222; padding: 2px 7px; border-radius: 100px;
+      white-space: nowrap; flex-shrink: 0;
     }
-    .section-card--purple .expect-block { border-color: rgba(99,102,241,0.12); border-left-color: rgba(99,102,241,0.4); }
-    .section-card--green  .expect-block { border-color: rgba(74,138,74,0.12);  border-left-color: rgba(74,138,74,0.4);  }
-    .section-card--amber  .expect-block { border-color: rgba(180,130,9,0.12);  border-left-color: rgba(180,130,9,0.4);  }
+    .source-tag--comm    { color: #666; border-color: #2a2a2a; }
+    .source-tag--feedback{ color: rgba(99,102,241,0.5); border-color: rgba(99,102,241,0.15); }
+    .source-tag--account { color: rgba(180,130,9,0.6);  border-color: rgba(180,130,9,0.15);  }
+    .source-tag--pressure{ color: rgba(74,138,74,0.6);  border-color: rgba(74,138,74,0.15);  }
 
-    .expect-label {
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: #444;
-      margin-bottom: 7px;
-    }
-    .section-card--purple .expect-label { color: rgba(99,102,241,0.5);  }
-    .section-card--green  .expect-label { color: rgba(74,138,74,0.5);   }
-    .section-card--amber  .expect-label { color: rgba(180,130,9,0.5);   }
+    .agreement-desc { font-size: 11px; color: #555; line-height: 1.6; }
 
-    .expect-text {
-      font-size: 12px;
-      line-height: 1.65;
-      color: #888;
-    }
-
-    /* ── LIVING AGREEMENTS FOOTER ── */
+    /* ── LIVING FOOTER ── */
     .footer-note {
-      max-width: 1280px;
-      margin: 40px auto 0;
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      max-width: 1280px; margin: 40px auto 0;
+      display: flex; align-items: center; gap: 12px;
     }
     .footer-note::before, .footer-note::after {
-      content: '';
-      flex: 1;
-      border-top: 1px dashed #1e1e1e;
+      content: ''; flex: 1; border-top: 1px dashed #1e1e1e;
     }
     .footer-note-text {
-      font-size: 11px;
-      color: #444;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      white-space: nowrap;
+      font-size: 11px; color: #444; letter-spacing: 1.5px;
+      text-transform: uppercase; white-space: nowrap;
     }
 
     /* ── CONTENTEDITABLE ── */
@@ -290,235 +206,270 @@
 <body>
   <canvas id="pixelBg"></canvas>
 
-  <!-- HEADER -->
   <div class="page-header">
     <div class="eyebrow">Dapper Agency — Internal</div>
     <h1>Leadership Agreements</h1>
-    <p class="subtitle" contenteditable="true">
-      Created together in May 2026. These reflect how we want to work — as peers, as leaders, and as a team under pressure. They are living agreements: we revisit them when the team changes or when they stop holding.
-    </p>
+    <p class="subtitle" contenteditable="true">Created together in May 2026. These agreements reflect how we want to lead — organised around the five principles that define leadership at Dapper.</p>
   </div>
 
-  <!-- GRID -->
-  <div class="agreements-grid">
+  <div class="principles-grid">
 
-    <!-- 1. COMMUNICATION -->
-    <div class="section-card">
-      <div class="pixel-corner neutral" style="top:14px;right:14px;"></div>
-      <div class="card-header">
-        <div class="card-number">01</div>
-        <div class="card-header-text">
-          <div class="card-tag">How we address each other</div>
-          <div class="card-title" contenteditable="true">Communication Norms</div>
-          <div class="card-question" contenteditable="true">How do we want to address each other, in good times and in difficult ones?</div>
+    <!-- 1 · OPERATIONAL EXCELLENCE -->
+    <div class="principle-card card--amber">
+      <div class="pixel-corner pc-amber" style="top:14px;right:14px;"></div>
+      <div class="card-top">
+        <div class="card-num">01</div>
+        <div class="card-top-text">
+          <div class="principle-tag">How we deliver</div>
+          <div class="principle-title" contenteditable="true">Operational Excellence</div>
+          <div class="principle-desc" contenteditable="true">Creating the conditions for high-quality output. Setting standards, removing blockers, and maintaining quality under pressure.</div>
         </div>
       </div>
       <hr class="card-divider">
       <div class="agreements-list">
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We communicate directly, respectfully, and with empathy.</div>
-            <div class="agreement-desc" contenteditable="true">We address each other openly and honestly, assuming positive intent. We respect each other's context, rhythm, and stage — and we never belittle one another.</div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We give 100% to our commitments.</span>
+              <span class="source-tag source-tag--account">Accountability</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">Not perfect — but responsible, committed, and doing our very best.</div>
           </div>
         </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We listen before we draw conclusions.</div>
-            <div class="agreement-desc" contenteditable="true">We hear the other perspective before forming a judgment. We take time to properly talk and hear each other out — not rushed, not half-thought-through.</div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We over-communicate when things are not going to plan.</span>
+              <span class="source-tag source-tag--account">Accountability</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">As soon as you know you can't meet a commitment, you're transparent immediately. You ask for help, and we help each other.</div>
           </div>
         </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We are collaborative, not combative.</div>
-            <div class="agreement-desc" contenteditable="true">We are all on the same team. Healthy friction is welcome. We don't need consensus — but we do need buy-in. Everyone gets their say, and we walk away aligned even when we don't all agree.</div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We do not project-manage each other's responsibilities.</span>
+              <span class="source-tag source-tag--account">Accountability</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">You own your commitments. We don't carry each other's load. Communicate proactively when something changes.</div>
           </div>
         </div>
-      </div>
-      <div class="expect-block">
-        <div class="expect-label">You can expect from me</div>
-        <div class="expect-text" contenteditable="true">To be outcome-oriented in how I communicate — with clear agendas, grounded in transparency and trust, and always looking forward rather than getting stuck in a negative spiral.</div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We keep each other accountable — with clarity.</span>
+              <span class="source-tag source-tag--account">Accountability</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">Accountability requires clarity on ownership, roles, deadlines, and how we measure success. Without clarity, accountability has no foundation.</div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- 2. FEEDBACK -->
-    <div class="section-card section-card--purple">
-      <div class="pixel-corner top-right"></div>
-      <div class="card-header">
-        <div class="card-number">02</div>
-        <div class="card-header-text">
-          <div class="card-tag">Growth through feedback</div>
-          <div class="card-title" contenteditable="true">Feedback Culture</div>
-          <div class="card-question" contenteditable="true">What can you expect from me when I have something to say about your work — and what do I expect from you?</div>
+    <!-- 2 · LEAD BY EXAMPLE -->
+    <div class="principle-card card--purple">
+      <div class="pixel-corner pc-purple" style="top:14px;right:14px;"></div>
+      <div class="card-top">
+        <div class="card-num">02</div>
+        <div class="card-top-text">
+          <div class="principle-tag">How we behave</div>
+          <div class="principle-title" contenteditable="true">Lead by Example</div>
+          <div class="principle-desc" contenteditable="true">Leaders set the tone through their own actions. Under pressure especially, behaviour speaks louder than words.</div>
         </div>
       </div>
       <hr class="card-divider">
       <div class="agreements-list">
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We always use the feedback framework.</div>
-            <div class="agreement-desc" contenteditable="true">Observation → feeling/effect → impact → preferred behaviour. For smaller moments this can be two sentences — but it always needs grounding.</div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We stay calm, clear, and solution-focused.</span>
+              <span class="source-tag source-tag--pressure">Under Pressure</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">Hard times are part of the journey. We keep our heads cool and find the most logical path forward without letting emotions take over.</div>
           </div>
         </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We give feedback directly, with context and without ego.</div>
-            <div class="agreement-desc" contenteditable="true">It is selfish not to share feedback. We give it grounded in facts, not subjective emotion. We adapt our style to the person. Praise in public; share developmental feedback in private.</div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We give room for emotions — and then steer towards a solution.</span>
+              <span class="source-tag source-tag--pressure">Under Pressure</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">Emotions are allowed. We acknowledge them. But we take the lead in steering conversations from emotion towards what is next.</div>
           </div>
         </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We receive feedback openly.</div>
-            <div class="agreement-desc" contenteditable="true">No defensiveness, no ego. We listen before judging. We share our point of view and engage in open discussion. Judgement comes after listening — not before.</div>
-          </div>
-        </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We lead by example on feedback culture.</div>
-            <div class="agreement-desc" contenteditable="true">We actively enable juniors and mediors to give feedback directly to peers. We coach them. We do not let them come to us to give feedback on someone else's behalf.</div>
-          </div>
-        </div>
-      </div>
-      <div class="expect-block">
-        <div class="expect-label">You can expect from me</div>
-        <div class="expect-text" contenteditable="true">To give you direct, clear, constructive, and solution-minded feedback. I will share context, use proper reasoning, and help you improve — not attack you personally. And I expect you to listen, share your point of view, and engage in an open discussion.</div>
-      </div>
-    </div>
-
-    <!-- 3. ACCOUNTABILITY -->
-    <div class="section-card section-card--amber">
-      <div class="pixel-corner amber" style="top:14px;right:14px;"></div>
-      <div class="card-header">
-        <div class="card-number">03</div>
-        <div class="card-header-text">
-          <div class="card-tag">Ownership & follow-through</div>
-          <div class="card-title" contenteditable="true">Accountability</div>
-          <div class="card-question" contenteditable="true">What can you expect from me when someone drops the ball — including when that someone is me?</div>
-        </div>
-      </div>
-      <hr class="card-divider">
-      <div class="agreements-list">
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We give 100% to our commitments.</div>
-            <div class="agreement-desc" contenteditable="true">When we make a commitment, we go all in. Not perfect — but responsible, committed, and doing our very best.</div>
-          </div>
-        </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We over-communicate when things are not going to plan.</div>
-            <div class="agreement-desc" contenteditable="true">As soon as you know you cannot meet a commitment, you are transparent about it immediately. You don't wait until the day before. You ask for help, and we help each other.</div>
-          </div>
-        </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We do not project-manage each other's responsibilities.</div>
-            <div class="agreement-desc" contenteditable="true">You own your commitments. We do not carry each other's load because someone cannot live up to agreements. Communicate proactively when something changes.</div>
-          </div>
-        </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We keep each other accountable — with clarity.</div>
-            <div class="agreement-desc" contenteditable="true">Accountability requires clarity on ownership, roles, deadlines, and how we measure success. Without that clarity, accountability has no foundation.</div>
-          </div>
-        </div>
-      </div>
-      <div class="expect-block">
-        <div class="expect-label">You can expect from me</div>
-        <div class="expect-text" contenteditable="true">To be transparent when I drop the ball — including when that ball is mine. To ask for help and to help when someone else needs it. To always be clear about ownership and expectations.</div>
-      </div>
-    </div>
-
-    <!-- 4. BEHAVIOUR UNDER PRESSURE -->
-    <div class="section-card section-card--green">
-      <div class="pixel-corner green" style="top:14px;right:14px;"></div>
-      <div class="card-header">
-        <div class="card-number">04</div>
-        <div class="card-header-text">
-          <div class="card-tag">When things get hard</div>
-          <div class="card-title" contenteditable="true">Behaviour Under Pressure</div>
-          <div class="card-question" contenteditable="true">What can you expect from me as a leader when things get hard?</div>
-        </div>
-      </div>
-      <hr class="card-divider">
-      <div class="agreements-list">
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We stay calm, clear, and solution-focused.</div>
-            <div class="agreement-desc" contenteditable="true">Hard times are a part of the journey. We keep our heads cool, think along, and find the most logical solution without letting emotions take over.</div>
-          </div>
-        </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We give room for emotions — and then steer towards a solution.</div>
-            <div class="agreement-desc" contenteditable="true">Emotions are allowed. We acknowledge them. But we take the lead in steering conversations away from emotion and towards what is next.</div>
-          </div>
-        </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We provide clarity and take ownership — without taking over.</div>
-            <div class="agreement-desc" contenteditable="true">Under pressure, we give clear priorities and clear expectations. We are decisive when needed. But we do not take over — we make sure others still feel empowered to decide.</div>
-          </div>
-        </div>
-        <div class="agreement-item">
-          <div class="agreement-bullet"></div>
-          <div class="agreement-body">
-            <div class="agreement-title" contenteditable="true">We roll up our sleeves.</div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We roll up our sleeves.</span>
+              <span class="source-tag source-tag--pressure">Under Pressure</span>
+            </div>
             <div class="agreement-desc" contenteditable="true">When things get hard, we are available. We jump in where needed — not to do someone else's job, but to support.</div>
           </div>
         </div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We lead by example on feedback culture.</span>
+              <span class="source-tag source-tag--feedback">Feedback</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">We actively enable juniors and mediors to give feedback directly to peers. We coach them and don't let them escalate through us.</div>
+          </div>
+        </div>
       </div>
-      <div class="expect-block">
-        <div class="expect-label">You can expect from me</div>
-        <div class="expect-text" contenteditable="true">To formulate and communicate a plan to get out of the situation. To stay calm and not let my stress impact the team. To give room for emotions while keeping us moving towards a solution. And to be available — with expertise, not pretension.</div>
+    </div>
+
+    <!-- 3 · FROM VISION TO PRACTICE -->
+    <div class="principle-card card--teal">
+      <div class="pixel-corner pc-teal" style="top:14px;right:14px;"></div>
+      <div class="card-top">
+        <div class="card-num">03</div>
+        <div class="card-top-text">
+          <div class="principle-tag">How we align direction</div>
+          <div class="principle-title" contenteditable="true">From Vision to Practice</div>
+          <div class="principle-desc" contenteditable="true">Translating strategy into clear priorities, decisions, and expectations — so everyone knows what they're working towards and why.</div>
+        </div>
+      </div>
+      <hr class="card-divider">
+      <div class="agreements-list">
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We are collaborative, not combative.</span>
+              <span class="source-tag source-tag--comm">Communication</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">We are all on the same team. Healthy friction is welcome. We don't need consensus — but we do need buy-in. Everyone gets heard, and we walk away aligned.</div>
+          </div>
+        </div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We provide clarity and take ownership — without taking over.</span>
+              <span class="source-tag source-tag--pressure">Under Pressure</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">Under pressure we give clear priorities and expectations. We are decisive when needed. But we don't take over — others must still feel empowered to decide.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 · ENABLING PEOPLE TO GROW -->
+    <div class="principle-card--wide card--green">
+      <div class="pixel-corner pc-green" style="top:14px;right:14px;"></div>
+      <div class="card-top">
+        <div class="card-num">04</div>
+        <div class="card-top-text">
+          <div class="principle-tag">How we develop people</div>
+          <div class="principle-title" contenteditable="true">Enabling People to Grow</div>
+          <div class="principle-desc" contenteditable="true">Leaders create the environment for growth. Feedback is the primary tool — structured, honest, and delivered without ego.</div>
+        </div>
+      </div>
+      <hr class="card-divider">
+      <div class="agreements-list">
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We always use the feedback framework.</span>
+              <span class="source-tag source-tag--feedback">Feedback</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">Observation → feeling/effect → impact → preferred behaviour. For smaller moments, two sentences is enough — but it always needs grounding.</div>
+          </div>
+        </div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We give feedback directly, with context and without ego.</span>
+              <span class="source-tag source-tag--feedback">Feedback</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">It is selfish not to share feedback. We give it grounded in facts, with context, adapted to the person. Praise in public; developmental feedback in private.</div>
+          </div>
+        </div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We receive feedback openly.</span>
+              <span class="source-tag source-tag--feedback">Feedback</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">No defensiveness, no ego. We listen before judging. We share our point of view and engage in open discussion. Judgement comes after listening — not before.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 · FEEDBACK CULTURE / COMMUNICATION -->
+    <div class="principle-card--wide">
+      <div class="pixel-corner pc-neutral" style="top:14px;right:14px;"></div>
+      <div class="card-top">
+        <div class="card-num">05</div>
+        <div class="card-top-text">
+          <div class="principle-tag">How we interact</div>
+          <div class="principle-title" contenteditable="true">Direct & Open Communication</div>
+          <div class="principle-desc" contenteditable="true">The foundation of everything. How we speak to each other determines whether trust, speed, and quality are possible at all.</div>
+        </div>
+      </div>
+      <hr class="card-divider">
+      <div class="agreements-list">
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We communicate directly, respectfully, and with empathy.</span>
+              <span class="source-tag source-tag--comm">Communication</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">We address each other openly and honestly, assuming positive intent. We respect each other's context, rhythm, and stage — and we never belittle one another.</div>
+          </div>
+        </div>
+        <div class="agreement-row">
+          <div class="agreement-dot"></div>
+          <div class="agreement-inner">
+            <div class="agreement-head">
+              <span class="agreement-title" contenteditable="true">We listen before we draw conclusions.</span>
+              <span class="source-tag source-tag--comm">Communication</span>
+            </div>
+            <div class="agreement-desc" contenteditable="true">We hear the other perspective before forming a judgment. We take time to properly talk and hear each other out — not rushed, not half-thought-through.</div>
+          </div>
+        </div>
       </div>
     </div>
 
   </div>
 
-  <!-- FOOTER NOTE -->
   <div class="footer-note">
     <span class="footer-note-text">Living agreements — revisited when the team changes or when they stop holding</span>
   </div>
 
   <script>
     /* ── localStorage ── */
-    function saveEdits() {
-      const data = {};
-      document.querySelectorAll('[contenteditable][data-eid]').forEach(el => {
-        data[el.dataset.eid] = el.innerHTML;
-      });
-      localStorage.setItem('dapper-leadership-edits-v1', JSON.stringify(data));
-    }
-
     function assignEids() {
       document.querySelectorAll('[contenteditable]').forEach((el, i) => {
         if (!el.dataset.eid) el.dataset.eid = 'ce-' + i;
       });
     }
-
+    function saveEdits() {
+      const data = {};
+      document.querySelectorAll('[data-eid]').forEach(el => { data[el.dataset.eid] = el.innerHTML; });
+      localStorage.setItem('dapper-leadership-v2', JSON.stringify(data));
+    }
     function loadEdits() {
-      const saved = localStorage.getItem('dapper-leadership-edits-v1');
+      const saved = localStorage.getItem('dapper-leadership-v2');
       if (!saved) return;
-      const data = JSON.parse(saved);
+      const d = JSON.parse(saved);
       document.querySelectorAll('[data-eid]').forEach(el => {
-        if (data[el.dataset.eid] !== undefined) el.innerHTML = data[el.dataset.eid];
+        if (d[el.dataset.eid] !== undefined) el.innerHTML = d[el.dataset.eid];
       });
     }
-
     document.addEventListener('input', saveEdits);
 
     /* ── Pixel background ── */
@@ -526,12 +477,9 @@
       const canvas = document.getElementById('pixelBg');
       const ctx = canvas.getContext('2d');
       function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-      resize();
-      window.addEventListener('resize', resize);
+      resize(); window.addEventListener('resize', resize);
 
-      const SIZE = 24, STEP = 24;
-      const G = [110, 231, 136];
-
+      const SIZE = 24, STEP = 24, G = [110, 231, 136];
       const FORMATIONS = [
         [[0,0],[1,0],[0,1],[1,1],[2,1],[0,2],[2,2],[0,3],[1,3]],
         [[1,0],[2,0],[0,1],[1,1],[2,1],[3,1],[0,2],[3,2],[1,3]],
@@ -539,63 +487,39 @@
         [[1,0],[0,1],[1,1],[2,1],[0,2],[2,2],[1,3],[1,4]],
         [[0,0],[0,1],[1,1],[2,1],[2,0],[1,2],[0,2],[1,3]],
       ];
-
       const ZONES = [
-        { x:[0.02,0.12], y:[0.04,0.18] },
-        { x:[0.88,0.97], y:[0.08,0.22] },
-        { x:[0.02,0.12], y:[0.55,0.70] },
-        { x:[0.88,0.97], y:[0.50,0.65] },
-        { x:[0.44,0.56], y:[0.44,0.56] },
-        { x:[0.87,0.97], y:[0.80,0.94] },
+        { x:[0.02,0.12], y:[0.04,0.18] }, { x:[0.88,0.97], y:[0.06,0.20] },
+        { x:[0.02,0.12], y:[0.55,0.72] }, { x:[0.88,0.97], y:[0.52,0.68] },
+        { x:[0.44,0.56], y:[0.44,0.56] }, { x:[0.87,0.97], y:[0.82,0.96] },
       ];
-
-      function makeCluster(zone) {
-        const f = FORMATIONS[Math.floor(Math.random() * FORMATIONS.length)];
-        const xMin = zone.x[0]*canvas.width;
-        const xMax = Math.max(xMin, zone.x[1]*canvas.width - STEP*4);
-        const yMin = zone.y[0]*canvas.height;
-        const yMax = Math.max(yMin, zone.y[1]*canvas.height - STEP*5);
-        const angle = Math.random() * Math.PI * 2;
-        const spd = 0.10 + Math.random() * 0.16;
+      function makeCluster(z) {
+        const f = FORMATIONS[Math.floor(Math.random()*FORMATIONS.length)];
+        const xMin = z.x[0]*canvas.width, xMax = Math.max(xMin, z.x[1]*canvas.width-STEP*4);
+        const yMin = z.y[0]*canvas.height, yMax = Math.max(yMin, z.y[1]*canvas.height-STEP*5);
+        const a = Math.random()*Math.PI*2, spd = 0.10+Math.random()*0.16;
         return {
-          x: xMin + Math.random()*(xMax - xMin),
-          y: yMin + Math.random()*(yMax - yMin),
-          vx: Math.cos(angle)*spd, vy: Math.sin(angle)*spd,
-          xMin, xMax, yMin, yMax,
-          pixels: f.map(([dx,dy]) => ({
-            dx, dy,
-            alpha: Math.random()*0.7,
-            target: Math.random()*0.8,
-            speed: 0.004 + Math.random()*0.008,
-            phase: Math.random()*Math.PI*2,
-            freq:  0.0003 + Math.random()*0.0004,
-            amp:   2 + Math.random()*4
-          }))
+          x: xMin+Math.random()*(xMax-xMin), y: yMin+Math.random()*(yMax-yMin),
+          vx: Math.cos(a)*spd, vy: Math.sin(a)*spd, xMin, xMax, yMin, yMax,
+          pixels: f.map(([dx,dy])=>({ dx, dy, alpha: Math.random()*0.7, target: Math.random()*0.8,
+            speed: 0.004+Math.random()*0.008, phase: Math.random()*Math.PI*2,
+            freq: 0.0003+Math.random()*0.0004, amp: 2+Math.random()*4 }))
         };
       }
-
       const clusters = ZONES.map(z => makeCluster(z));
       let t = 0;
-
       function tick() {
         t++;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0,0,canvas.width,canvas.height);
         clusters.forEach(c => {
-          c.x += c.vx; c.y += c.vy;
-          if (c.x <= c.xMin || c.x >= c.xMax) { c.vx *= -1; c.x = Math.min(Math.max(c.x, c.xMin), c.xMax); }
-          if (c.y <= c.yMin || c.y >= c.yMax) { c.vy *= -1; c.y = Math.min(Math.max(c.y, c.yMin), c.yMax); }
-
-          c.pixels.forEach(px => {
-            if (Math.abs(px.alpha - px.target) < 0.02) {
-              px.target = Math.random() < 0.25 ? 0 : 0.2 + Math.random()*0.65;
-              px.speed  = 0.003 + Math.random()*0.008;
-            }
-            px.alpha += (px.target - px.alpha) * px.speed;
-            if (px.alpha > 0.02) {
-              const wx = Math.sin(t * px.freq + px.phase) * px.amp;
-              const wy = Math.cos(t * px.freq * 0.7 + px.phase) * px.amp;
-              ctx.fillStyle = `rgba(${G[0]},${G[1]},${G[2]},${px.alpha})`;
-              ctx.fillRect(c.x + px.dx*STEP + wx, c.y + px.dy*STEP + wy, SIZE, SIZE);
+          c.x+=c.vx; c.y+=c.vy;
+          if(c.x<=c.xMin||c.x>=c.xMax){c.vx*=-1;c.x=Math.min(Math.max(c.x,c.xMin),c.xMax);}
+          if(c.y<=c.yMin||c.y>=c.yMax){c.vy*=-1;c.y=Math.min(Math.max(c.y,c.yMin),c.yMax);}
+          c.pixels.forEach(px=>{
+            if(Math.abs(px.alpha-px.target)<0.02){px.target=Math.random()<0.25?0:0.2+Math.random()*0.65;px.speed=0.003+Math.random()*0.008;}
+            px.alpha+=(px.target-px.alpha)*px.speed;
+            if(px.alpha>0.02){
+              ctx.fillStyle=`rgba(${G[0]},${G[1]},${G[2]},${px.alpha})`;
+              ctx.fillRect(c.x+px.dx*STEP+Math.sin(t*px.freq+px.phase)*px.amp, c.y+px.dy*STEP+Math.cos(t*px.freq*0.7+px.phase)*px.amp, SIZE, SIZE);
             }
           });
         });
@@ -604,11 +528,7 @@
       tick();
     }
 
-    window.addEventListener('load', () => {
-      initPixels();
-      assignEids();
-      loadEdits();
-    });
+    window.addEventListener('load', () => { initPixels(); assignEids(); loadEdits(); });
   </script>
 </body>
 </html>
